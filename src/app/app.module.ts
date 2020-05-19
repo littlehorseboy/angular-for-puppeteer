@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,7 +14,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    FormsModule,
+    LoginModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
