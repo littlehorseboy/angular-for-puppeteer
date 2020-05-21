@@ -1,13 +1,28 @@
 <div class="p-grid p-justify-center">
   <div class="p-col">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-      <input type="text" pInputText placeholder="Username">
-    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input
+          [(ngModel)]="model.account"
+          pInputText
+          name="account"
+          placeholder="account"
+        >
+      </div>
 
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="pi pi-tags"></i></span>
-      <input type="text" pInputText placeholder="Price">
-    </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-tags"></i></span>
+        <input
+          type="password"
+          [(ngModel)]="model.password"
+          pInputText
+          name="password"
+          placeholder="password"
+        >
+      </div>
+
+      <button pButton type="submit" label="送出"></button>
+    </form>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
+import { RecordModule } from './record/record.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     FormsModule,
     LoginModule,
+    RecordModule,
     AppRoutingModule,
   ],
   providers: [],
