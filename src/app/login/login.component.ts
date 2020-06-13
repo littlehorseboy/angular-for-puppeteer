@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,18 @@ export class LoginComponent implements OnInit {
     password: '',
   };
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    alert(JSON.stringify(this.model));
+    if (this.model.account === '123' && this.model.password === '321') {
+      this.router.navigate(['/record']);
+    } else {
+      alert('帳號或密碼錯誤！');
+    }
   }
 }
