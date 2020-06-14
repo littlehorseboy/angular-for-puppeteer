@@ -1,1 +1,41 @@
-<p>record works!</p>
+<div>
+  <p-radioButton
+    name="periodsOfTheDay"
+    value="morning"
+    [(ngModel)]="selectedValue"
+    label="早上"
+  >
+  </p-radioButton>
+</div>
+<div>
+  <p-radioButton
+    name="periodsOfTheDay"
+    value="afternoon"
+    [(ngModel)]="selectedValue"
+    label="下午"
+  >
+  </p-radioButton>
+</div>
+
+<button pButton type="button" label="送出" (click)="onClick()"></button>
+
+<br />
+
+<div *ngIf="punchInList.length > 0">
+  <p-table [value]="punchInList">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>日期</th>
+        <th>時間</th>
+        <th>上下午</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-punchIn>
+      <tr>
+        <td>{{punchIn.date}}</td>
+        <td>{{punchIn.time}}</td>
+        <td>{{punchIn.periodsOfTheDay}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

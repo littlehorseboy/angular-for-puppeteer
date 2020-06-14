@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  model = {
+  public model = {
     account: '',
     password: '',
   };
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  public onSubmit(): void {
     if (this.model.account === '123' && this.model.password === '321') {
       this.router.navigate(['/record']);
     } else {
