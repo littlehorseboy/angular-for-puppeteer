@@ -16,6 +16,12 @@ export class RecordComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedValue = 'morning';
+    const punchInList = localStorage.getItem('punchInList');
+    if (punchInList) {
+      this.punchInList = JSON.parse(punchInList);
+    } else {
+      this.punchInList = [];
+    }
   }
 
   public onClick(): void {
@@ -34,5 +40,7 @@ export class RecordComponent implements OnInit {
         periodsOfTheDay: this.selectedValue,
       },
     ];
+
+    localStorage.setItem('punchInList', JSON.stringify(this.punchInList));
   }
 }
