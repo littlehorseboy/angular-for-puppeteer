@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { RecordModule } from './record/record.module';
 import { AppComponent } from './app.component';
+import { AlertPageModule } from './alert-page/alert-page.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     LoginModule,
     RecordModule,
+    AlertPageModule,
     AppRoutingModule,
   ],
   providers: [],
