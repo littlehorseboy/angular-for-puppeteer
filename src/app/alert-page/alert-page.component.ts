@@ -13,6 +13,13 @@ export class AlertPageComponent implements OnInit {
   }
 
   public alertMessage(): void {
-    alert('message');
+    const time = new Date().getTime();
+
+    if (time % 2 === 0) {
+      alert('message');
+    } else {
+      location.reload();
+    }
+
   }
 }
